@@ -7,16 +7,16 @@ pipeline {
         sh "./build.sh"
       }
     }
-    stage("test") {
+    stage("Test") {
         steps {
             sh "chmod +x ./test.sh"
             sh "./test.sh"
         }
     }
-    stage("run") {
+    stage("Deploy") {
         steps {
-            sh "chmod +x ./run.sh"
-            sh "./run.sh"
+            sh "chmod +x ./deploy.sh"
+            sh "./deploy.sh"
         }
     }
   }
